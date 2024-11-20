@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_boleto');
             $table->unsignedBigInteger('id_incidente')->nullable();
-            $table->enum('tipo', ['confir_compra', 'incidencia']);
+            $table->integer('tipo');
             $table->text('mensaje');
             $table->dateTime('fecha_envio');
             $table->timestamps();
