@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('fecha');
             $table->time('hora_salida');
             $table->time('hora_estima_llegada');
-            $table->enum('tipo_corrida', ['directa', 'intermedia']);
+            $table->integer('tipo_corrida');
             $table->json('asientos');
             $table->decimal('precio');
             $table->timestamps();

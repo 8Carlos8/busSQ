@@ -21,7 +21,7 @@ return new class extends Migration
             $table->decimal('monto', 8, 2);
             $table->decimal('descuento', 8, 2);
             $table->unsignedInteger('id_pago');
-            $table->enum('estado', ['activo', 'cancelado']);
+            $table->integer('estado');
             $table->timestamps();
 
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
